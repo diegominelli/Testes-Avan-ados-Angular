@@ -1,19 +1,12 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-
-import { Photo } from './../interfaces/photo';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Photo } from '../interfaces/photo';
 
 @Component({
   selector: 'app-photo-board',
   templateUrl: './photo-board.component.html',
-  styleUrls: ['./photo-board.component.scss'],
+  styleUrls: ['photo-board.component.scss'],
 })
-export class PhotoBoardComponent implements OnInit, OnChanges {
+export class PhotoBoardComponent implements OnChanges {
   @Input() public photos: Photo[];
   public rows: any[][] = [];
 
